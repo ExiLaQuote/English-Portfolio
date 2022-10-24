@@ -1,0 +1,159 @@
+*,*::before,*::after {
+	overflow-x: hidden;
+	overflow-y: hidden;
+	box-sizing: border-box;
+	text-decoration: none;
+	font-family: "Lato";
+}
+
+@font-face {font-family: "Lato"; src: url("Lato.ttf")}
+@font-face {font-family: "Geomanist"; src: url("Geomanist.ttf")}
+@font-face {font-family: "Vollkorn"; src: url("Vollkorn.ttf")}
+@font-face {font-family: "Poppins"; src: url("Poppins.ttf")}
+@font-face {font-family: "Geograph"; src: url("Geograph.ttf")}
+
+*::selection {background: #F7DC64;}
+*::-webkit-scrollbar {display: none;}
+html {scroll-behavior: smooth !important;}
+
+:root {
+  --gray: #252525;
+  --green: rgb(138, 217, 120);
+  --yellow: rgb(224, 220, 94);
+  --red: rgb(219, 98, 110);
+	--beige: rgb(222, 222, 183);
+	--teal: darkcyan;
+
+}
+
+body, .extraBG, .header, #homeBG, .tabsBG, .textBG, .textTXT {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+body {background-color: black; justify-content: space-around;}
+
+.header {
+	z-index: 1000;
+	position: fixed;
+	top: 0vh;
+	width: 100vw;
+	height: 11vh;
+	background-color: var(--gray);
+	justify-content: space-around;
+  border: 1vh solid var(--teal);
+}
+
+.header p {
+	color: white;
+	text-align: center;
+	margin: 0vw 2vw 0vw 2vw;
+	font-size: 1.4vw;
+	font-family: "Lato"; 
+	font-weight: 700; 
+	letter-spacing: 0.14vw;
+	transition: color 200ms ease, font-size 200ms ease; cursor: pointer;
+}
+
+.header p a, .header p i {
+	font-family: "Lato"; 
+	font-weight: 700; 
+	letter-spacing: 0.14vw;
+	color: white;
+}
+
+.header p:hover {font-size: 3.2vh;}
+
+#homeBG {
+	position: absolute;
+	top: 5vh;
+	height: 100vh;
+	width: 100vw;
+}
+
+#homeBG div:not(#homeBtn) {
+	position: absolute; 
+	transition: transform 1000ms ease-in-out, box-shadow 300ms ease;
+	border-radius: 100%;
+	border: 1.5vh double rgb(207, 207, 208);
+}
+
+#homeBG div:hover {box-shadow: 0vw 0vw 1vw 1vw var(--teal);}
+#homeBG img:not(#graph) {height: 30vh; opacity: 0; transition: opacity 800ms ease-in-out;}
+#graph {height: 100vw;}
+
+#homeBtn {
+	z-index: 100000;
+	height: 7vh;
+	width: 7vh;
+	background-color: var(--gray);
+	border: 2vh solid white;
+	border-radius: 100%;
+	border: 1.5vh double rgb(207, 207, 208);
+	transition: background-color 400ms ease-in-out, box-shadow 300ms ease;
+}
+
+#homeBtn:hover {background-color: lightgray; cursor: pointer;}
+
+.home1 {transform: translate(-12vw, -12vw);} 
+.home2 {transform: translate(12vw, -12vw);} 
+.home3 {transform: translate(-12vw, 12vw);} 
+.home4 {transform: translate(12vw, 12vw);} 
+
+hr {height: 0.4vh; border-radius: 100%;}
+.textBG hr {height: 0.8vh; width: 80vw;}
+.title {font-weight: 900; font-size: 3.7vw; color: white;}
+
+.imgBG {
+  position: absolute;
+	display: flex;
+  flex-direction: row;
+	justify-content: center;
+	align-items: center;
+  gap: 4vw;
+}
+
+.imgTXT {
+  font-family: "Geograph";
+  font-size: 1.3vw;
+  transform: translate(0vw, -1.3vw);
+  max-width: 50vw;
+	color: white;
+}
+
+.pillar {
+	position: absolute;
+	top: 11vh;
+	height: 89vh;
+	z-index: 100;
+}
+
+.extraBG {
+	z-index: 97;
+	position: relative;
+	width: 100vw;
+	height: 100vh;
+	background-color: rgb(241, 242, 242);
+  text-align: center;
+  border: 1vh dashed var(--teal);
+	overflow-y: scroll;
+}
+
+.sourcesTXT {
+  position: absolute;
+  top: 0vh;
+  font-family: "Geomanist", sans-serif;
+  color: rgb(83, 173, 197);
+  font-weight: 900;
+  font-size: 1.7vw; 
+  padding: 5vw 6vw 5vw 6vw;
+	line-height: 5vh;
+}
+
+.sourcesTXT span {
+  color: rgb(203, 179, 43);
+  font-family: "Vollkorn";
+  font-size: 2vw;
+}
+
